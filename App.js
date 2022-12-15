@@ -1,8 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
 
 function App() {
-  return <Text>Wylkerd Alura</Text>
+  return (
+    <SafeAreaView>
+      <Text>Wylkerd Alura</Text>
+    </SafeAreaView>
+  )
 }
 
 export default App;
