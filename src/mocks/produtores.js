@@ -40,6 +40,24 @@ const produtores = {
         imagem: potager,
         distancia: `${gerarNumeroAleatorio(1, 500)}m`,
         estrelas: gerarNumeroAleatorio(1, 5),
+    },
+    {
+      nome: "Green 2",
+      imagem: green,
+      distancia: `${gerarNumeroAleatorio(1, 500)}m`, // Gerar Numero Aleatorio entre 1 e 500 metros
+      estrelas: gerarNumeroAleatorio(1, 5) // Gerar Numero Aleatorio entre 1 e 5 estrelas
+    },
+    {
+        nome: "Salad 2",
+        imagem: salad,
+        distancia: `${gerarNumeroAleatorio(1, 500)}m`,
+        estrelas: gerarNumeroAleatorio(1, 5),
+    },
+    {
+        nome: "Jenny Jack Farm 2",
+        imagem: jennyJack,
+        distancia: `${gerarNumeroAleatorio(1, 500)}m`,
+        estrelas: gerarNumeroAleatorio(1, 5),
     }
   ]
 }
