@@ -13,6 +13,11 @@ class Topo extends Component {
 
   // Exemplo de ciclo de vida utilizando Classe
   // Quando o componente é criado na tela
+  /* É o mesmo que isso em um functional component
+    useEffect(() => {
+
+    }, []);
+  */
   componentDidMount() {
     this.atualizaTopo();
   }
