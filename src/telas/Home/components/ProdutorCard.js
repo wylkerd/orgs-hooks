@@ -1,12 +1,16 @@
-import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import Estrelas from '../../../components/Estrelas';
 
 export default function ProdutorCard({ nome, imagem, distancia, estrelas }) {
   return (
     <View style={ estilos.cartao }>
       <Image source={ imagem } accessibilityLabel={ nome } style={ estilos.imagem } />
       <View style={ estilos.informacoes }>
-        <Text style={ estilos.nome }>{ nome }</Text>
+        <View>
+          <Text style={ estilos.nome }>{ nome }</Text>
+          <Estrelas quantidade={ estrelas }/>
+        </View>
         <Text style={ estilos.distancia }>{ distancia }</Text>
       </View>
     </View>
