@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
 
 import { carregaProdutores } from '../../../services/carregaDados'
+import ProdutorCard from './ProdutorCard';
 
 export default function Produtores({ topo: Topo }) {
   const [titulo, setTitulo] = useState('');
@@ -27,8 +28,8 @@ export default function Produtores({ topo: Topo }) {
   return (
     <FlatList
       data={lista}
+      renderItem={({ item }) => <ProdutorCard { ...item }/>} // Passando todos parâmetro com a descontrução(spread) do obj
       keyExtractor={({ nome }, index) => nome + index}
-      renderItem={({ item: { nome } }) => <Text>{ nome }</Text>}
       ListHeaderComponent={TopoLista}
     />
   )
