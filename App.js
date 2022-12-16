@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, SafeAreaView } from 'react-native';
+import { SafeAreaView } from 'react-native';
+import Home from './src/telas/Home';
 
 function App() {
   return (
     <SafeAreaView>
-      <Text>Wylkerd Alura</Text>
+      <Home />
     </SafeAreaView>
   )
 }
