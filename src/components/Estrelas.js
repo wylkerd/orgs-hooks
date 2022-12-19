@@ -23,7 +23,7 @@ export default function Estrelas({
   const RenderEstrelas = () => {
     const listaEstrelas = [];
 
-    for (let i = 0; 1 < 5; i++) {
+    for (let i = 0; i < 5; i++) {
       listaEstrelas.push(
         <TouchableOpacity 
           key={i}
@@ -50,8 +50,8 @@ const estilosFuncao = ( grande ) => StyleSheet.create({
     flexDirection: 'row'
   },  
   estrela: {
-    width: grande ? 36 : 38,
-    height: grande ? 36 : 38,
+    width: grande ? 36 : 12,
+    height: grande ? 36 : 12,
     marginRight: 2
   }
 })
