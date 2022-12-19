@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Text, FlatList, StyleSheet } from 'react-native'
 
-import { carregaProdutores } from '../../../services/carregaDados'
 import ProdutorCard from './ProdutorCard';
+import useProdutores from '../../../hooks/useProdutores';
 
 export default function Produtores({ topo: Topo }) {
-  const [titulo, setTitulo] = useState('');
-  const [lista, setLista] = useState([]);
-
-
-  // Array de dependencia vazio executa apenas uma vez o useEffect, assim que carrega a tela
-  useEffect(() => {
-    const retorno = carregaProdutores();
-    setTitulo(retorno.titulo);
-    setLista(retorno.lista);
-  }, []);
+  const [ titulo, lista ] = useProdutores();
 
   const TopoLista = () => {
     return (
