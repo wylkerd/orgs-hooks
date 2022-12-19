@@ -23,14 +23,14 @@ export default function Estrelas({
   const RenderEstrelas = () => {
     const listaEstrelas = [];
 
-    for (let i = 0; 1 < 2; i++) {
+    for (let i = 0; 1 < 5; i++) {
       listaEstrelas.push(
         <TouchableOpacity 
-          key={ i }
+          key={i}
           onPress={() => setQuantidade(i + 1)}
           disabled={!editavel}
         >
-          <Image source={ getImage(i) } style={ estilos.estrela } />
+          <Image source={getImage(i)} style={estilos.estrela} />
         </TouchableOpacity>
       )
     }
@@ -50,8 +50,8 @@ const estilosFuncao = ( grande ) => StyleSheet.create({
     flexDirection: 'row'
   },  
   estrela: {
-    width: grande ? 36 : 12,
-    height: grande ? 36 : 12,
+    width: grande ? 36 : 38,
+    height: grande ? 36 : 38,
     marginRight: 2
   }
 })
