@@ -9,6 +9,11 @@ export default function useProdutores() {
     // Array de dependencia vazio executa apenas uma vez o useEffect, assim que carrega a tela
     useEffect(() => {
       const retorno = carregaProdutores();
+
+      retorno.lista.sort(
+        (produtor1, produtor2) => produtor1.distancia - produtor2.distancia
+      )
+      
       setTitulo(retorno.titulo);
       setLista(retorno.lista);
     }, []);

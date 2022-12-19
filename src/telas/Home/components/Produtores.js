@@ -19,7 +19,7 @@ export default function Produtores({ topo: Topo }) {
   return (
     <FlatList
       data={lista}
-      renderItem={({ item }) => <ProdutorCard { ...item }/>} // Passando todos parâmetro com a descontrução(spread) do obj
+      renderItem={({ item }) => <ProdutorCard { ...item }/>} // Passando todos parâmetro com a descontrução(spread) do obj, item da Lista
       keyExtractor={({ nome }, index) => nome + index}
       ListHeaderComponent={TopoLista}
     />
